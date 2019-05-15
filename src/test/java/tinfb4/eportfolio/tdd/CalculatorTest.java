@@ -1,12 +1,14 @@
 package tinfb4.eportfolio.tdd;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
 
-    private Calculator calc;
+    private Calculator calc = new Calculator();
     private double deltaPrecisionLoss = 0.0000001;
+
 
     //region All tests for "add()" go in here
     @Test
@@ -15,10 +17,9 @@ public class CalculatorTest {
         double b = 0;
         double expected = 0;
 
-        calc = new Calculator();
         double actual = calc.add(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -27,10 +28,9 @@ public class CalculatorTest {
         double b = 0;
         double expected = 1;
 
-        calc = new Calculator();
         double actual = calc.add(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -39,10 +39,9 @@ public class CalculatorTest {
         double b = 0.5;
         double expected = 1.5;
 
-        calc = new Calculator();
         double actual = calc.add(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -51,10 +50,9 @@ public class CalculatorTest {
         double b = 3;
         double expected = 5;
 
-        calc = new Calculator();
         double actual = calc.add(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -63,10 +61,9 @@ public class CalculatorTest {
         double b = -3;
         double expected = -5;
 
-        calc = new Calculator();
         double actual = calc.add(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -75,10 +72,9 @@ public class CalculatorTest {
         double b = 3;
         double expected = 4.2;
 
-        calc = new Calculator();
         double actual = calc.add(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -87,10 +83,9 @@ public class CalculatorTest {
         double b = 5.25;
         double expected = 6.45;
 
-        calc = new Calculator();
         double actual = calc.add(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -99,10 +94,9 @@ public class CalculatorTest {
         double b = 1.3;
         double expected = 2.6;
 
-        calc = new Calculator();
         double actual = calc.add(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
     //endregion
 
@@ -113,22 +107,20 @@ public class CalculatorTest {
         double b = 0;
         double expected = 0;
 
-        calc = new Calculator();
         double actual = calc.sub(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
-    public void sub_zeroAndZero_shouldBeZero() {
+    public void sub_onePointThreeAndPointSix_shouldBePointSeven() {
         double a = 1.3;
         double b = 0.6;
-        double expected = 0.6;
+        double expected = 0.7;
 
-        calc = new Calculator();
         double actual = calc.sub(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
     //endregion
 
@@ -139,10 +131,9 @@ public class CalculatorTest {
         double b = 0;
         double expected = 0;
 
-        calc = new Calculator();
         double actual = calc.mul(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -151,10 +142,9 @@ public class CalculatorTest {
         double b = 1;
         double expected = 0;
 
-        calc = new Calculator();
         double actual = calc.mul(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -163,10 +153,9 @@ public class CalculatorTest {
         double b = 0.5;
         double expected = 0;
 
-        calc = new Calculator();
         double actual = calc.mul(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -175,10 +164,9 @@ public class CalculatorTest {
         double b = 1;
         double expected = 0.5;
 
-        calc = new Calculator();
         double actual = calc.mul(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -187,10 +175,9 @@ public class CalculatorTest {
         double b = 3;
         double expected = 6;
 
-        calc = new Calculator();
         double actual = calc.mul(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -199,10 +186,9 @@ public class CalculatorTest {
         double b = 3;
         double expected = 6.3;
 
-        calc = new Calculator();
         double actual = calc.mul(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -211,10 +197,9 @@ public class CalculatorTest {
         double b = 1;
         double expected = -1;
 
-        calc = new Calculator();
         double actual = calc.mul(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
 
     @Test
@@ -223,14 +208,87 @@ public class CalculatorTest {
         double b = -1;
         double expected = 1;
 
-        calc = new Calculator();
         double actual = calc.mul(a,b);
 
-        assertEquals(expected,actual,deltaPrecisionLoss);
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
     }
     //endregion
 
     //region All tests for "div()" go in here
+    @Test
+    public void div_negativeAndPositive_shouldBeNegative() {
+        double a = -1;
+        double b = 1;
+        double expected = -1;
 
+        double actual = calc.div(a,b);
+
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
+    }
+
+    @Test
+    public void div_negativeAndNegative_shouldBePositive() {
+        double a = -1;
+        double b = -1;
+        double expected = 1;
+
+        double actual = calc.div(a,b);
+
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
+    }
+
+    @Test(expected = Exception.class)
+    public void div_dividedByZero_shouldThrowException() {
+        double a = 1;
+        double b = 0;
+
+        calc.div(a,b);
+    }
+
+    @Test
+    public void div_twoAndOne_shouldBeTwo() {
+        double a = 2;
+        double b = 1;
+        double expected = 2;
+
+        double actual = calc.div(a,b);
+
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
+    }
+
+    @Test
+    public void div_twoAndTwo_shouldBeOne() {
+        double a = 2;
+        double b = 2;
+        double expected = 1;
+
+        double actual = calc.div(a,b);
+
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
+    }
+
+    @Test
+    public void div_oneAndTwo_shouldBePointFive() {
+        double a = 1;
+        double b = 2;
+        double expected = 0.5;
+
+        double actual = calc.div(a,b);
+
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
+    }
+
+    @Test
+    public void div_oneAndPointFive_shouldBeTwo() {
+        double a = 1;
+        double b = 0.5;
+        double expected = 2;
+
+        double actual = calc.div(a,b);
+
+        TestCase.assertEquals(expected,actual,deltaPrecisionLoss);
+    }
     //endregion
+
+
 }
